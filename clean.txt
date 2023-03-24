@@ -1,0 +1,21 @@
+Reducing Project Sizes
+Upon opening a project UE4 will generate various files and folders if they do not already exist:
+
+.vs
+
+Binaries
+
+DerivedDataCache
+
+Intermediate
+
+Plugins/*/Intermediate (any Intermediate folder inside a plugin)
+
+Saved ProjectName.sln (only if your project has a c++ code in it)
+
+These files and folders can be deleted to reduce the total size of your project when archiving, sharing and/or moving the project. They are often times also excluded from source control using a .ignore list for example.
+
+The Binaries folder inside of plugins should not be deleted as they might contain pre-built libraries of which the source code is not distributed with the plugin and therefore cannot be regenerated on demand.
+
+
+https://unrealcommunity.wiki/cleaning-your-project-d4s8khfl
